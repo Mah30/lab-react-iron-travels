@@ -1,16 +1,38 @@
 import travelPlansData from "../assets/travel-plans.json";
 
-function TravelList (){
+const TravelList = () => {
 
     return (
-        <ul>
-          {travelPlansData.map((plan) => (
-            <li key={plan.id}>
-              <h3>{plan.destination}</h3>
-              <p>{plan.description}</p>
-            </li>
-          ))}
-        </ul>
+      <ul>
+        {travelPlansData.map(currentTravelPlan => (
+        <li key={currentTravelPlan.id} 
+        style={{
+          display:'flex', 
+          border:'1px solid black', 
+          padding:'1rem',
+          marginBottom:'1rem',
+          gap:'1rem'}}
+          >
+          <div>
+           
+            <div>
+              <img src={currentTravelPlan.image} style={{width:'150px'}}/>
+            </div>
+
+            <div>
+              <h2> {currentTravelPlan.destination}({currentTravelPlan.days} Days)</h2>
+              <p>{currentTravelPlan.description}</p>
+              <p>Price: currentTravelPlan.totalCost </p>     
+            </div>        
+            
+          </div>
+        </li>))}
+        
+
+      
+      
+      
+      </ul>
       );
 
 }
