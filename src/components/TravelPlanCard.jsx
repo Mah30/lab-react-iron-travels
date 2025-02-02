@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 const colors = ["purple", "blue", "green", "yellow", "orange", "red"];
 
 function TravelPlanCard({ plan, deletePlan, toggleFavorite, isFavorite }) {
