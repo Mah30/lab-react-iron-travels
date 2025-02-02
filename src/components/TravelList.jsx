@@ -1,6 +1,5 @@
-import travelPlansData from "../assets/travel-plans.json";
+
 import { useState } from "react";
-import TravelPlanCard from "./TravelPlanCard";
 
 const colors = ["purple", "blue", "green", "yellow", "orange", "red"];
 
